@@ -1,0 +1,22 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing:border-box ;
+}
+.logo
+{
+    height: 100%;
+    width: 100px;
+}
+
+@media only screen and (max-width: 500px) {
+    .logo {
+        height: 3rem;
+        width: 3rem;
+    }
+    .coro{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

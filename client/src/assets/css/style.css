@@ -1,0 +1,168 @@
+@media(min-width:1000px)
+{
+    body{
+        
+        margin:0;
+        padding: 0;
+        box-sizing:border-box ;
+    }
+    .logo{
+        height: 100%;
+        width: 100px;
+    }
+
+    .main-body{
+        display: flex;
+        height: 70%;
+    }
+    .body-mapdiv{
+        margin: 0;
+        display: flex;
+        flex-direction: row;;
+    }
+    .mapdiv{
+        width: max-content;
+        height: max-content;
+    }
+    .mainmap{
+        width: 616px;
+        height: 768px;
+    }
+    .land
+    {
+        width: 200px;
+        fill: tomato;
+        stroke:black;
+        stroke-opacity: 1;
+        stroke-width:1.5;
+        transition: width 0.3s;
+    }
+    .land:hover{
+        fill:lightsalmon;
+        stroke-width: 5;
+    }
+    *{
+        margin:0;
+        padding: 0;
+        box-sizing:border-box ;
+    }
+    .style_count{
+        margin: 0;
+        padding: 5px;
+        font-size:1.5em;
+    }
+    .style_map{
+        margin: auto;
+        font-size:1em;
+        display: block;
+    }
+    .style_map2{
+        margin: auto;
+        font-size:1em;
+        display: block;
+    }
+    canvas{
+            width:380px !important;
+            height:300px !important;
+      }
+    
+    .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+        height: 300px; 
+    }
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    .style_table{
+        padding-top: 10px;
+        width: 100%;
+        height: max-content;
+    }
+    
+    table{
+        color:black;
+    }
+    
+}
+@media(max-width:1000px)
+{
+    .logo {
+        height: 3rem;
+        width: 3rem;
+    }
+    .main-body{
+        display: flex;
+        height: 70%;
+    }
+    .body-mapdiv{
+        display: flex;
+        margin: auto;
+        flex-direction: column;
+    }
+    .mapdiv{
+        width: max-content;
+        height: max-content;
+    }
+    .tablediv{
+        width: max-content;
+        height: max-content;
+    }
+    .mainmap{
+        width: 616px;
+        height: 768px;
+    }
+    .land
+    {
+        width: 200px;
+        fill: tomato;
+        stroke:black;
+        stroke-opacity: 1;
+        stroke-width:1.5;
+        transition: width 0.3s;
+    }
+    .land:hover{
+        fill: black;
+    }
+    *{
+        margin:0;
+        padding: 0;
+        box-sizing:border-box ;
+    }
+    .style_count{
+        margin: 0;
+        padding: 5px;
+        font-size:1.5em;
+    }
+    .style_map{
+        margin: auto;
+        font-size:1em;
+        display: block;
+    }
+    .style_map2{
+        margin: auto;
+        font-size:1em;
+        display: block;
+    }
+    .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+        height: 300px; 
+    }
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    .style_table{
+        padding-top: 10px;
+        height: max-content;
+    }
+    table{
+        color:black;
+    }
+}
