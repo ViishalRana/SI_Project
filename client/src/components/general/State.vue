@@ -7,16 +7,16 @@
             </div>
             <div class="style_map">
                 <div class="chart" style="background-color:white;">
-                    <app-line-chart v-if="isLoaded" :chartData="chartData_confirmed" :labels="labels" bgcolor="#f1c40f" title="Confirmed"></app-line-chart>
+                    <app-line-chart v-if="isLoaded" :chartData="chartData_confirmed" :labels="labels" bgcolor="#ffc107" title="Confirmed"></app-line-chart>
                 </div>
                                
             </div>    
             <div class="style_map">
                 <div class="chart" style="background-color:white;">
-                    <app-line-chart v-if="isLoaded" :chartData="chartData_recovered" :labels="labels" bgcolor="#f1c40f" title="Recovered"></app-line-chart>
+                    <app-line-chart v-if="isLoaded" :chartData="chartData_recovered" :labels="labels" bgcolor="#28a745" title="Recovered"></app-line-chart>
                 </div>
                 <div class="chart" style="background-color:white;">
-                    <app-line-chart  v-if="isLoaded" :chartData="chartData_deaths" :labels="labels" bgcolor="#f1c40f" title="Deceased"></app-line-chart>
+                    <app-line-chart  v-if="isLoaded" :chartData="chartData_deaths" :labels="labels" bgcolor="#dc3545" title="Deceased"></app-line-chart>
                 </div>   
             </div>              
 
@@ -34,15 +34,22 @@
 <script>
 import Cards from './Cards.vue';
 import LineChart from './LineChart.vue'
-import Gujarat from '../states/Gujarat.vue'
+import GJ from '../states/Gujarat.vue'
 import AP from '../states/AndhraPradesh.vue'
 import AN from '../states/AndmanAndNicobarIslands.vue'
 import AR from '../states/ArunachalPradesh.vue'
 import AS from '../states/Assam.vue'
 import GA from '../states/Goa.vue'
 import Home from '../general/Home.vue'
-import DL from '../states/Delhi.vue'
 import BR from '../states/Bihar.vue'
+import JK from '../states/JammuKashmir.vue'
+import CH from '../states/Chandigarh.vue'
+import CT from '../states/Chhatisgarh.vue'
+import DD from '../states/DamanAndDiu.vue'
+import DL from '../states/Delhi.vue'
+import DN from '../states/DadraAndNagarHaveli.vue'
+import HP from '../states/HimachalPradesh.vue'
+
 import axios from 'axios'
 import VueTableDynamic from 'vue-table-dynamic'
 
@@ -82,7 +89,7 @@ export default{
     components:{
         'app-cards':Cards,
         'app-line-chart':LineChart,
-        'GJ':Gujarat,
+        'GJ':GJ,
         'AP':AP,
         'AN':AN,
         'AS':AS,
@@ -90,6 +97,13 @@ export default{
         'AR':AR,
         'DL':DL,
         'BR':BR,
+        'JK':JK,
+        'CH':CH,
+        'CT':CT,
+        'DD':DD,
+        'DL':DL,
+        'DN':DN,
+        'HP':HP,
         VueTableDynamic
     },
     mounted(){
@@ -128,7 +142,7 @@ export default{
                         this.chartData_deaths[cnt]=response.data[fd][c].total["deceased"]
                         
                         //console.log(response.data[fd].TT.total);
-                        d.setDate(d.getDate()-10);
+                        d.setDate(d.getDate()-7);
                         cnt++;
                     }
                     else{

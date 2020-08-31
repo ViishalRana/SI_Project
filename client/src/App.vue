@@ -2,7 +2,6 @@
 <div id="app">
   <app-header></app-header>
   <component :is="curComponent" :curState="curState"></component>
-
 </div>
 </template>
 
@@ -11,12 +10,14 @@ import Header from './components/general/Header.vue'
 import Home from './components/general/Home.vue'
 import Gujarat from './components/states/Gujarat.vue'
 import State from './components/general/State.vue'
+import AW from './components/general/Awareness.vue'
 export default {
   components:{
     'app-header': Header,
     'app-home':Home,
     'GJ':Gujarat,
-    'app-state':State
+    'app-state':State,
+    'app-awarness':AW
   },
   data(){
     return {
@@ -29,6 +30,9 @@ export default {
       this.curComponent='app-state';
       this.curState=cs;
       console.log("it works.!");
+    },
+    loadAwarness(){
+      this.curComponent='app-awarness';
     }
   }
 }

@@ -13,7 +13,7 @@
             </li>
             
             <li class="nav-item">
-                <a class="nav-link" href="Awarness.html">Covid Awarness</a>
+                <a class="nav-link" >Covid Awarness</a>
             </li>
         </ul>
         </div>
@@ -23,6 +23,11 @@
 </style>
 <script>
 export default{
+    methods: {
+      loadAwarness:function(){
+        this.$parent.loadAwarness();
+      }
+    },
 
 };
 </script>
