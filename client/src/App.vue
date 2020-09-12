@@ -27,8 +27,18 @@ export default {
   },
   methods:{
     change(cs){
-      this.curComponent='app-state';
-      this.curState=cs;
+      if(cs=="TT"){
+        this.curComponent='app-home';
+        curState=null;
+      }
+      else if(cs=='AWRNS'){
+        this.curComponent='app-awarness';
+        curState=null;
+      }
+      else{
+        this.curComponent='app-state';
+        this.curState=cs;
+      }
       console.log("it works.!");
     },
     loadAwarness(){

@@ -6,6 +6,7 @@
                 <component v-bind:is="currentState"></component>
             </div>
             <div class="style_map">
+                <h1>{{ stateName }}</h1>
                 <div class="chart" style="background-color:white;">
                     <app-line-chart v-if="isLoaded" :chartData="chartData_confirmed" :labels="labels" bgcolor="#ffc107" title="Confirmed"></app-line-chart>
                 </div>
@@ -49,9 +50,74 @@ import DD from '../states/DamanAndDiu.vue'
 import DL from '../states/Delhi.vue'
 import DN from '../states/DadraAndNagarHaveli.vue'
 import HP from '../states/HimachalPradesh.vue'
+import HR from '../states/Haryana.vue'
+import JH from '../states/Jharkhand.vue'
+import KA from '../states/Karnataka.vue'
+import KL from '../states/Kerela.vue'
+import LD from '../states/Lakshadweep.vue'
+import MH from '../states/Maharashtra.vue'
+import ML from '../states/Meghalaya.vue'
+import MN from '../states/Manipur.vue'
+import MZ from '../states/Mizoram.vue'
+import MP from '../states/MadhyaPradesh'
+import NL from '../states/Nagaland.vue'
+import OR from '../states/Odisha.vue'
+import PB from '../states/Punjab.vue'
+import PY from '../states/Puducherry.vue'
+import RJ from '../states/Rajasthan.vue'
+import SK from '../states/Sikkim.vue'
+import TG from '../states/Telangana.vue'
+import TN from '../states/Tamilnadu.vue'
+import TR from '../states/Tripura.vue'
+import UP from '../states/Uttarpradesh.vue'
+import UT from '../states/Uttarakhand.vue'
+import WB from '../states/WestBengal.vue'
+
+
 
 import axios from 'axios'
 import VueTableDynamic from 'vue-table-dynamic'
+var codeToState=
+{
+    TT:'India',
+    GJ:'Gujarat',
+    AP:'Andhra Pradesh',
+    AN:'Andman Nicobar',
+    AR:'Arunachal Pradesh',
+    AS:'Assam',
+    GA:'Goa',
+    BR:'Bihar',
+    JK:'Jammu Kashmir',
+    CH:'Chandigarh',
+    CT:'Chhatisgarh',
+    DD:'Daman and Diu',
+    DL:'Delhi',
+    DN:'Dadra And Nagar Haveli',
+    HP:'Himachal Pradesh',
+    HR:'Haryana',
+    JH:'Jharkhand',
+    KA:'Karnataka',
+    KL:'Kerela',
+    LD:'Lakshadweep',
+    MH:'Maharashtra',
+    ML:'Meghalaya',
+    MN:'Manipur',
+    MZ:'Mizoram',
+    MP:'MadhyaPradesh',
+    NL:'Nagaland',
+    OR:'Odisha',
+    PB:'Punjab',
+    PY:'Puducherry',
+    RJ:'Rajasthan',
+    SK:'Sikkim',
+    TG:'Telangana',
+    TN:'Tamil Nadu',
+    TR:'Tripura',
+    UP:'Uttar Pradesh',
+    UT:'Uttarakhand',
+    WB:'West Bengal'
+};
+
 
 export default{
     data:function(){
@@ -67,6 +133,7 @@ export default{
             chartData_deaths:[],
             labels:[],
             isLoaded:0,
+            stateName:codeToState[this.curState],
             params:{
                 data:[
                     ['State Code','District Name','Confirmed','Recovered','Deceased']
@@ -104,6 +171,29 @@ export default{
         'DL':DL,
         'DN':DN,
         'HP':HP,
+        'HR':HR,
+        'JH':JH,
+        'JK':JK,
+        'KA':KA,
+        'KL':KL,
+        'LD':LD,
+        'MH':MH,
+        'ML':ML,
+        'MN':MN,
+        'MP':MP,
+        'MZ':MZ,
+        'NL':NL,
+        'OR':OR,
+        'PB':PB,
+        'PY':PY,
+        'RJ':RJ,
+        'SK':SK,
+        'TG':TG,
+        'TN':TN,
+        'TR':TR,
+        'UP':UP,
+        'UT':UT,
+        'WB':WB,
         VueTableDynamic
     },
     mounted(){
