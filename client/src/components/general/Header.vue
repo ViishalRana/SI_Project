@@ -13,7 +13,7 @@
             </li>
             
             <li class="nav-item">
-                <a class="nav-link" v-on:click="change('AWRNS')" >Covid Awarness</a>
+                <a href="#" class="nav-link" v-on:click="change('AWRNS')" >Covid Awarness</a>
             </li>
         </ul>
         </div>
