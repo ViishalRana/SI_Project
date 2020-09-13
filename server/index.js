@@ -14,7 +14,7 @@ const cors = require("cors");
 var app = express();
 app.use(bodyParser.json());
 app.use(cors());
-var mongourl = 'mongodb://127.0.0.1:27017/covidtracker'
+var mongourl = 'mongodb+srv://admin:admin@CovidTracker.adcjs.mongodb.net/CovidTracker?retryWrites=true&w=majority'
 
 mongoose.connect(mongourl, { useNewUrlParser: true, useUnifiedTopology: true });
 

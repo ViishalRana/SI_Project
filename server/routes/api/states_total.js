@@ -13,9 +13,9 @@ router.get('/',async (req,res)=>{
 
 
 async function loadStatesCollection(){
-    const client=await mongodb.MongoClient.connect('mongodb://127.0.0.1:27017/covidtracker',{useNewUrlParser:true},{ useUnifiedTopology: true }); 
+    const client=await mongodb.MongoClient.connect('mongodb+srv://admin:admin@CovidTracker.adcjs.mongodb.net/CovidTracker?retryWrites=true&w=majority',{useNewUrlParser:true},{ useUnifiedTopology: true }); 
     
-    return client.db('covidtracker').collection('states');
+    return client.db('CovidTracker').collection('states');
 }
 
 module.exports = router;
